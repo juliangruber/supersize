@@ -3,22 +3,25 @@ var css = require('css');
 module.exports = scale;
 
 function scale (el, max) {
-  max = max || 0.85;
+  max = max || 0.66;
+  
+  css(el, {
+    position : 'absolute',
+    left : '50%',
+    top : '50%',
+    whiteSpace : 'nowrap',
+    display : 'inline',
+    lineHeight : 1
+  });
   
   var parentRect = el.parentNode.getClientRects()[0];
   var rect = el.getClientRects()[0];
   var maxWidth = parentRect.width * max;
   var maxHeight = parentRect.height * max;
-  var retriesLeft = 1000;
+  var retriesLeft = 10000;
   
   var size = parseInt(el.style.fontSize, 10);
   if (isNaN(size)) size = 12;
-  
-  css(el, {
-    position : 'absolute',
-    left : '50%',
-    top : '50%'
-  })
   
   while(true) {
     if (!--retriesLeft) break;
@@ -41,7 +44,7 @@ function scale (el, max) {
   });
     
   function setSize (size) {
-    css(el, { fontSize : size + 'px', height : size });
+    css(el, { fontSize : size + 'px' });
     rect = el.getClientRects()[0];
   }
   
