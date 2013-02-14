@@ -20,11 +20,18 @@
 
 ### autoscale(el[, max=0.66])
 
-  Make the DOM node `el` as big as possible in its parent element, limited by
-  factor `max`.
+  Make the inner text of `el` as big as possible while `el` still stays in the
+  bounds of its parent element.
   
-  This returns a function that basically calls itself again with the same
-  arguments, so you can pass it to event listeners:
+  **!!** `el`'s parent element needs to have `position:relative` or
+  `position:absolute`. 
+  
+  The factor `max` limits the maximum possible size. If you want the text to
+  take all available space, set `max` to `1`.
+  
+  This returns a function that basically calls `autoscale` again with the same
+  arguments. This way you can execute it immediately and pass it as an event
+  listener in one line:
   
   ```js
   window.addEventListener('resize', autoscale(el));
