@@ -1,73 +1,73 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>autoscale-text</title>
-		<script src="../build/build.js"></script>
-		<style>
-			html {
-				font : 20px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
-			}
-		
-			div {
-				position : absolute;
-			}
-			
-			p {
-				text-transform : uppercase;
-				font-weight : bold;
-			}
-			
-			#big {
-				width : 100%;
-				height : 50%;
-				left : 0;
-				top : 0;
-				background-color : lightcoral;
-			}
-			
-			#small {
-				width : 50%;
-				height : 50%;
-				top : 50%;
-			}
-			
-			.left {
-				left : 0;
-				background-color : lightblue;
-				color : white;
-			}
-			
-			.right {
-				right : 0;
-				background-color : lightyellow;
-			}
-			
-		</style>
-	</head>
-	<body>
-		<div id="big">
-			<p>Say it big</p>
-		</div>
-		<div id="small" class="left">
-			<p>big</p>
-		</div>
-		<div id="small" class="right">
-			<p>and<br />bold!</p>
-		</div>
-		
-		<script>
-			var autoscale = require('autoscale-text');
-			var fns = [];
-			
-			fns.push(autoscale(document.querySelectorAll('p')[0]));
-			fns.push(autoscale(document.querySelectorAll('p')[1]));
-			fns.push(autoscale(document.querySelectorAll('p')[2]));
-			
-			window.addEventListener('resize', function () {
-				for (var i = 0; i < fns.length; i++) {
-					fns[i]();
-				}
-			});
-		</script>
-	</body>
+  <head>
+    <title>autoscale-text</title>
+    <script src="../build/build.js"></script>
+    <style>
+      html {
+        font : 20px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+    
+      div {
+        position : absolute;
+      }
+      
+      p {
+        text-transform : uppercase;
+        font-weight : bold;
+      }
+      
+      #big {
+        width : 100%;
+        height : 50%;
+        left : 0;
+        top : 0;
+        background-color : lightcoral;
+      }
+      
+      #small {
+        width : 50%;
+        height : 50%;
+        top : 50%;
+      }
+      
+      .left {
+        left : 0;
+        background-color : lightblue;
+        color : white;
+      }
+      
+      .right {
+        right : 0;
+        background-color : lightyellow;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div id="big">
+      <p>Say it big</p>
+    </div>
+    <div id="small" class="left">
+      <p>big</p>
+    </div>
+    <div id="small" class="right">
+      <p>and<br />bold!</p>
+    </div>
+    
+    <script>
+      var autoscale = require('autoscale-text');
+      var fns = [];
+      
+      fns.push(autoscale(document.querySelectorAll('p')[0]));
+      fns.push(autoscale(document.querySelectorAll('p')[1]));
+      fns.push(autoscale(document.querySelectorAll('p')[2]));
+      
+      window.addEventListener('resize', function () {
+        for (var i = 0; i < fns.length; i++) {
+          fns[i]();
+        }
+      });
+    </script>
+  </body>
 </html>
