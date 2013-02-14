@@ -15,10 +15,11 @@ function scale (el, max) {
   });
   
   var parentRect = el.parentNode.getClientRects()[0];
-  var rect = el.getClientRects()[0];
   var maxWidth = parentRect.width * max;
   var maxHeight = parentRect.height * max;
-  var retriesLeft = 10000;
+  
+  var rect = el.getClientRects()[0];
+  var retriesLeft = 1000;
   
   var size = parseInt(el.style.fontSize, 10);
   if (isNaN(size)) size = 12;
@@ -52,5 +53,7 @@ function scale (el, max) {
     return rect.width <= maxWidth && rect.height <= maxHeight;
   }
   
-  return scale.bind(this, el, max)
+  return function () {
+    scale(el, max);
+  };
 }
