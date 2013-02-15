@@ -1,14 +1,13 @@
-
 # autoscale-text
 
-  make text as big as possible in its parent element
+  make text as big as possible in its parent element.
 
-  ```js
-  var autoscale = require('autoscale-text');
-  var el = document.querySelector('#el');
+```js
+var autoscale = require('autoscale-text');
+var el = document.querySelector('#el');
   
-  window.addEventListener('resize', autoscale(el));
-  ```
+window.addEventListener('resize', autoscale(el));
+```
   
   check out the [demo](https://juliangruber.github.com/autoscale-text).
 
@@ -33,10 +32,10 @@
   arguments. This way you can execute it immediately and pass it as an event
   listener in one line:
   
-  ```js
-  window.addEventListener('resize', autoscale(el));
-  // scales now and on resize
-  ```
+```js
+window.addEventListener('resize', autoscale(el));
+// scales now and on resize
+```
 
 ## License
 
