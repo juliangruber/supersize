@@ -22,13 +22,13 @@ window.addEventListener('resize', autoscale(el));
   Make the inner text of `el` as big as possible while `el` still stays in the
   bounds of its parent element.
   
-  **!!** `el`'s parent element needs to have `position:relative` or
+  **!!** the element's parent needs to have `position:relative` or
   `position:absolute`. 
   
   The factor `max` limits the maximum possible size. If you want the text to
   take all available space, set `max` to `1`.
   
-  This returns a function that basically calls `autoscale` again with the same
+  This returns a function that calls `autoscale` again with the same
   arguments. This way you can execute it immediately and pass it as an event
   listener in one line:
   
