@@ -9,7 +9,7 @@ var el = document.querySelector('#el');
 window.addEventListener('resize', autoscale(el));
 ```
   
-  check out the [demo](https://juliangruber.github.com/autoscale-text).
+  check out the [demo](http://juliangruber.github.com/autoscale-text).
 
 ## Installation
 
