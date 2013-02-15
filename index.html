@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>autoscale-text</title>
+    <title>supersize</title>
     <script src="build/build.js"></script>
     <style>
       html {
@@ -56,12 +56,12 @@
     </div>
     
     <script>
-      var autoscale = require('autoscale-text');
+      var supersize = require('supersize');
       var fns = [];
       
-      fns.push(autoscale(document.querySelectorAll('p')[0]));
-      fns.push(autoscale(document.querySelectorAll('p')[1]));
-      fns.push(autoscale(document.querySelectorAll('p')[2]));
+      fns.push(supersize(document.querySelectorAll('p')[0]));
+      fns.push(supersize(document.querySelectorAll('p')[1]));
+      fns.push(supersize(document.querySelectorAll('p')[2]));
       
       window.addEventListener('resize', function () {
         for (var i = 0; i < fns.length; i++) {
