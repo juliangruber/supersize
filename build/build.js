@@ -243,12 +243,12 @@ module.exports = function(el, obj){
 };
 
 });
-require.register("autoscale-text/index.js", function(exports, require, module){
+require.register("supersize/index.js", function(exports, require, module){
 var css = require('css');
 
-module.exports = scale;
+module.exports = supersize;
 
-function scale (el, max) {
+function supersize (el, max) {
   max = max || 0.66;
   
   css(el, {
@@ -304,5 +304,5 @@ function scale (el, max) {
   };
 }
 });
-require.alias("component-css/index.js", "autoscale-text/deps/css/index.js");
+require.alias("component-css/index.js", "supersize/deps/css/index.js");
 
