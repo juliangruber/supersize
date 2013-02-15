@@ -1,6 +1,6 @@
 {
-  "name": "autoscale-text",
-  "repo": "juliangruber/autoscale-text",
+  "name": "supersize",
+  "repo": "juliangruber/supersize",
   "description": "make text as big as possible in the parent element",
   "version": "0.0.1",
   "keywords": [],

@@ -1,8 +1,8 @@
 var css = require('css');
 
-module.exports = scale;
+module.exports = supersize;
 
-function scale (el, max) {
+function supersize (el, max) {
   max = max || 0.66;
   
   css(el, {
