@@ -300,7 +300,7 @@ function supersize (el, max) {
   }
   
   return function () {
-    scale(el, max);
+    supersize(el, max);
   };
 }
 });
