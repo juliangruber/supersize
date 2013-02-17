@@ -2,7 +2,7 @@
   "name": "supersize",
   "repo": "juliangruber/supersize",
   "description": "make text as big as possible in the parent element",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "keywords": [],
   "dependencies": {
     "component/css": "0.0.2"
