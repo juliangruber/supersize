@@ -24,18 +24,20 @@ function supersize (el, max) {
   var size = parseInt(el.style.fontSize, 10);
   if (isNaN(size)) size = 12;
   
-  while(true) {
-    if (!--retriesLeft) break;
+  if (el.innerText.replace(/\s/g, '') != '') {
+    while(true) {
+      if (!--retriesLeft) break;
     
-    if (isInside()) {
-      setSize(++size);     
-      if (!isInside()) {
+      if (isInside()) {
+        setSize(++size);     
+        if (!isInside()) {
+          setSize(--size);
+          break;
+        }
+      } else {
         setSize(--size);
-        break;
+        if (isInside()) break;
       }
-    } else {
-      setSize(--size);
-      if (isInside()) break;
     }
   }
   
