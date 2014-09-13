@@ -13,6 +13,7 @@ window.addEventListener('resize', supersize(el));
 
 ## Installation
 
+    $ npm install supersize
     $ component install juliangruber/supersize
 
 ## API
