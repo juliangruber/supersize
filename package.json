@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "keywords": [],
   "dependencies": {
-    "component-css": "0.0.6"
+    "component-css": "0.0.8"
   },
   "browser": {
     "css": "component-css"
